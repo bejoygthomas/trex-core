@@ -341,7 +341,7 @@ struct  tcpstat_int_t {
     uint64_t    tcps_rcvctrl;       /* control (SYN|FIN|RST) packets rcvd */
     uint64_t    tcps_rcvctrl_syn;   /* control (SYN) packets rcvd */
     uint64_t    tcps_rcvctrl_fin;   /* control (FIN) packets rcvd */
-    uint64_t    tcps_rcvctrl_syn;   /* control (RST) packets rcvd */
+    uint64_t    tcps_rcvctrl_rst;   /* control (RST) packets rcvd */
 
     uint64_t    tcps_rcvbadsum;     /* packets received with ccksum errs */
     uint64_t    tcps_rcvbadoff;     /* packets received with bad offset */
