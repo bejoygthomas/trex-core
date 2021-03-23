@@ -600,6 +600,19 @@ HOT_FUNC int tcp_flow_input(CPerProfileCtx * pctx,
 
     ostate = tp->t_state;
 
+
+    if (ti->ti_flags & (TH_SYN|TH_FIN|TH_RST)){
+        INC_STAT(pctx, tg_id, tcps_rcvctrl);
+        if (ti->ti_flags & (TH_SYN)){
+            INC_STAT(pctx, tg_id, tcps_rcvctrl_syn);
+        }
+        if (ti->ti_flags & (TH_FIN)){
+            INC_STAT(pctx, tg_id, tcps_rcvctrl_fin);
+        }
+        if (ti->ti_flags & (TH_RST)){
+            INC_STAT(pctx, tg_id, tcps_rcvctrl_rst);
+        }
+    }
     /* sanity check */
     if (off + ti->ti_len > m->pkt_len || (optlen<0)){
         /* somthing wrong here drop the packet */

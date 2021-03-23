@@ -143,7 +143,11 @@ void tcpstat::Dump(FILE *fd){
     MYC(tcps_rcvacktoomuch);       
     MYC(tcps_rcvackpack);      
     MYC(tcps_rcvackbyte);      
-    MYC(tcps_rcvwinupd);           
+    MYC(tcps_rcvwinupd);
+    MYC(tcps_rcvctrl);
+    MYC(tcps_rcvctrl_syn);
+    MYC(tcps_rcvctrl_fin);
+    MYC(tcps_rcvctrl_rst);
     MYC(tcps_pawsdrop);        
     MYC(tcps_predack);         
     MYC(tcps_preddat);         

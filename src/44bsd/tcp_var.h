@@ -312,6 +312,7 @@ struct  tcpstat_int_t {
     uint64_t    tcps_sndctrl_syn;   /* control (SYN) packets sent */
     uint64_t    tcps_sndctrl_fin;   /* control (FIN) packets sent */
     uint64_t    tcps_sndctrl_rst;   /* control (RST) packets sent */
+
     uint64_t    tcps_sndacks;       /* ack-only packets sent */
     uint64_t    tcps_rcvtotal;      /* total packets received */
     uint64_t    tcps_rcvpack;       /* packets received in sequence */
@@ -337,6 +338,10 @@ struct  tcpstat_int_t {
     uint64_t    tcps_sndprobe;      /* window probes sent */
     uint64_t    tcps_sndurg;        /* packets sent with URG only */
     uint64_t    tcps_sndwinup;      /* window update-only packets sent */
+    uint64_t    tcps_rcvctrl;       /* control (SYN|FIN|RST) packets rcvd */
+    uint64_t    tcps_rcvctrl_syn;   /* control (SYN) packets rcvd */
+    uint64_t    tcps_rcvctrl_fin;   /* control (FIN) packets rcvd */
+    uint64_t    tcps_rcvctrl_syn;   /* control (RST) packets rcvd */
 
     uint64_t    tcps_rcvbadsum;     /* packets received with ccksum errs */
     uint64_t    tcps_rcvbadoff;     /* packets received with bad offset */

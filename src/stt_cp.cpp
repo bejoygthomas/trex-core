@@ -400,7 +400,10 @@ void CSTTCpPerTGIDPerDir::create_clm_counters(){
     TCP_S_ADD_CNT_E(tcps_rcvoopack,"out-of-order packets received");
     TCP_S_ADD_CNT_E(tcps_rcvoobyte,"out-of-order bytes received");
     TCP_S_ADD_CNT_E(tcps_rcvpackafterwin,"packets with data after window");
-
+    TCP_S_ADD_CNT(tcps_rcvctrl,"control (SYN|FIN|RST) packets recvd");
+    TCP_S_ADD_CNT(tcps_rcvctrl_syn,"control (SYN) packets recvd");
+    TCP_S_ADD_CNT(tcps_rcvctrl_fin,"control (FIN) packets recvd");
+    TCP_S_ADD_CNT(tcps_rcvctrl_rst,"control (RST) packets recvd");
     TCP_S_ADD_CNT_E(tcps_rcvbyteafterwin,"bytes rcvd after window");
     TCP_S_ADD_CNT_E(tcps_rcvafterclose,"packets rcvd after close");
     TCP_S_ADD_CNT_E(tcps_rcvwinprobe,"rcvd window probe packets");
