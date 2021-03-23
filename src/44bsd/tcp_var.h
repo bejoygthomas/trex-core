@@ -309,6 +309,9 @@ struct  tcpstat_int_t {
     uint64_t    tcps_sndbyte_ok;    /* data bytes sent by tcp  */
 
     uint64_t    tcps_sndctrl;       /* control (SYN|FIN|RST) packets sent */
+    uint64_t    tcps_sndctrl_syn;   /* control (SYN) packets sent */
+    uint64_t    tcps_sndctrl_fin;   /* control (FIN) packets sent */
+    uint64_t    tcps_sndctrl_rst;   /* control (RST) packets sent */
     uint64_t    tcps_sndacks;       /* ack-only packets sent */
     uint64_t    tcps_rcvtotal;      /* total packets received */
     uint64_t    tcps_rcvpack;       /* packets received in sequence */

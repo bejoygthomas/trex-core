@@ -697,6 +697,15 @@ send:
             INC_STAT(pctx, tg_id, tcps_sndacks);
         } else if (flags & (TH_SYN|TH_FIN|TH_RST)){
             INC_STAT(pctx, tg_id, tcps_sndctrl);
+            if (flags & (TH_SYN)){
+                INC_STAT(pctx, tg_id, tcps_sndctrl_syn);
+            }
+            if (flags & (TH_FIN)){
+                INC_STAT(pctx, tg_id, tcps_sndctrl_fin);
+            }
+            if (flags & (TH_RST)){
+                INC_STAT(pctx, tg_id, tcps_sndctrl_rst);
+            }
         } else if (SEQ_GT(tp->snd_up, tp->snd_una)){
             INC_STAT(pctx, tg_id, tcps_sndurg);
         } else{

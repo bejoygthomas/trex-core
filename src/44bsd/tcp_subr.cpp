@@ -117,6 +117,9 @@ void tcpstat::Dump(FILE *fd){
     MYC(tcps_sndurg);
     MYC(tcps_sndwinup);
     MYC(tcps_sndctrl);
+    MYC(tcps_sndctrl_syn);
+    MYC(tcps_sndctrl_fin);
+    MYC(tcps_sndctrl_rst);
 
     MYC(tcps_rcvtotal);    
     MYC(tcps_rcvpack);     
