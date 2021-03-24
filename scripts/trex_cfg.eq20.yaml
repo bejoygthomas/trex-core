@@ -1,0 +1,20 @@
+- interfaces:
+  - enp23s0
+  - dummy
+  limit_memory: 4096
+  low_end: true
+  port_bandwidth_gb: 1
+  port_info:
+  - default_gw: 2.1.0.2
+    ip: 2.1.0.102
+  - default_gw: 0.0.0.0
+    ip: 0.0.0.0
+  port_limit: 2
+  rx_desc: 512
+  rx_desc_drop: 512
+  tx_desc: 256
+  version: 2
+  zmq_pub_port: '4503'
+  zmq_rpc_port: '4502'
+  memory    :
+         dp_flows: 10000000
