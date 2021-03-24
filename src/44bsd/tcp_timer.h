@@ -107,6 +107,7 @@
 
 #define TCPTV_MIN       (1)     /* minimum allowable value */
 #define TCPTV_REXMTMAX  ( 5*PR_SLOWHZ)     /* max allowable REXMT value */
+#define TCPTV_REXMTMIN  ( 2*PR_SLOWHZ)     /* max allowable REXMT value */
 
 #define TCP_LINGERTIME  120         /* linger at most 2 minutes */
 

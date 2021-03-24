@@ -135,7 +135,7 @@ tcp_timers(CPerProfileCtx * pctx,struct tcpcb *tp, int timer){
         }
 
         TCPT_RANGESET(tp->t_rxtcur, rexmt,
-            tp->t_rttmin, TCPTV_REXMTMAX);
+            TCPTV_REXMTMIN, TCPTV_REXMTMAX);
         tp->t_timer[TCPT_REXMT] = tp->t_rxtcur;
         /*
          * If losing, let the lower level know and try for
