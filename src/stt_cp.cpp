@@ -350,15 +350,16 @@ void CSTTCpPerTGIDPerDir::create_clm_counters(){
     TCP_S_ADD_CNT(tcps_segstimed,"segs where we tried to get rtt");
     TCP_S_ADD_CNT(tcps_rttupdated,"times we succeeded");
     TCP_S_ADD_CNT(tcps_delack,"delayed acks sent");
-    TCP_S_ADD_CNT(tcps_sndtotal,"total packets sent");
-    TCP_S_ADD_CNT(tcps_sndpack,"data packets sent");
+    TCP_S_ADD_CNT(tcps_sndtotal,"total packets sent (S1 + S2 + S3 + S4)");
+    TCP_S_ADD_CNT(tcps_sndpack,"data packets sent (S1)");
+    TCP_S_ADD_CNT(tcps_rcvtotal, "total packets received");
     TCP_S_ADD_CNT(tcps_sndbyte,"data bytes sent by application");
     TCP_S_ADD_CNT(tcps_sndbyte_ok,"data bytes sent by tcp");
-    TCP_S_ADD_CNT(tcps_sndctrl,"control (SYN|FIN|RST) packets sent");
+    TCP_S_ADD_CNT(tcps_sndctrl,"control (SYN|FIN|RST) packets sent (S2)");
     TCP_S_ADD_CNT(tcps_sndctrl_syn,"control (SYN) packets sent");
     TCP_S_ADD_CNT(tcps_sndctrl_fin,"control (FIN) packets sent");
     TCP_S_ADD_CNT(tcps_sndctrl_rst,"control (RST) packets sent");
-    TCP_S_ADD_CNT(tcps_sndacks,"ack-only packets sent ");
+    TCP_S_ADD_CNT(tcps_sndacks,"ack-only packets sent (S3)");
     TCP_S_ADD_CNT(tcps_rcvtotal,"total packets received ");
     TCP_S_ADD_CNT(tcps_rcvpack,"packets received in sequence");
     TCP_S_ADD_CNT(tcps_rcvbyte,"bytes received in sequence");
@@ -380,7 +381,7 @@ void CSTTCpPerTGIDPerDir::create_clm_counters(){
     TCP_S_ADD_CNT(tcps_testdrops,"connections dropped by user at timeout (no-close flag --nc)"); // due to test timeout --nc 
     
     
-    TCP_S_ADD_CNT_E(tcps_sndrexmitpack,"data packets retransmitted");
+    TCP_S_ADD_CNT_E(tcps_sndrexmitpack,"data packets retransmitted(S4)");
     TCP_S_ADD_CNT_E(tcps_sndrexmitbyte,"data bytes retransmitted");
     TCP_S_ADD_CNT_E(tcps_sndprobe,"window probes sent");
     TCP_S_ADD_CNT_E(tcps_sndurg,"packets sent with URG only");

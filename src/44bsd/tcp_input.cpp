@@ -600,7 +600,7 @@ HOT_FUNC int tcp_flow_input(CPerProfileCtx * pctx,
 
     ostate = tp->t_state;
 
-
+    INC_STAT(pctx, tg_id, tcps_rcvtotal);
     if (ti->ti_flags & (TH_SYN|TH_FIN|TH_RST)){
         INC_STAT(pctx, tg_id, tcps_rcvctrl);
         if (ti->ti_flags & (TH_SYN)){

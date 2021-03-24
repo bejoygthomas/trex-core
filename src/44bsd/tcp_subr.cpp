@@ -107,7 +107,8 @@ void tcpstat::Dump(FILE *fd){
     MYC(tcps_keepdrops);   
     MYC(tcps_testdrops);
 
-    MYC(tcps_sndtotal);    
+    MYC(tcps_sndtotal);
+    MYC(tcps_rcvtotal);
     MYC(tcps_sndpack);     
     MYC(tcps_sndbyte);     
     MYC(tcps_sndrexmitpack);
