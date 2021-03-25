@@ -142,6 +142,7 @@ CTRexExtendedDriverDb::CTRexExtendedDriverDb() {
     register_driver(std::string("net_enic"),CTRexExtendedDriverBaseVIC::create);
     register_driver(std::string("net_mlx5"),CTRexExtendedDriverBaseMlnx5G::create);
     register_driver(std::string("net_ice"),CTRexExtendedDriverIce::create);
+    register_driver(std::string("net_ionic"),CTRexExtendedDriverAfPacket::create);
    // register_driver(std::string("net_mlx4"),CTRexExtendedDriverMlnx4::create);
     //register_driver(std::string("net_ntacc"), CTRexExtendedDriverBaseNtAcc::create);
 

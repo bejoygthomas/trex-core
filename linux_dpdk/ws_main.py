@@ -1241,6 +1241,15 @@ dpdk_src_x86_64 = SrcGroup(dir='src/dpdk/',
                  'drivers/net/ixgbe/ixgbe_vf_representor.c',
                  'drivers/net/ixgbe/rte_pmd_ixgbe.c',
 
+                 #ionic
+                 'drivers/net/ionic/ionic_mac_api.c',
+                 'drivers/net/ionic/ionic_rx_filter.c',
+                 'drivers/net/ionic/ionic_rxtx.c',
+                 'drivers/net/ionic/ionic_dev.c',
+                 'drivers/net/ionic/ionic_ethdev.c',
+                 'drivers/net/ionic/ionic_lif.c',
+                 'drivers/net/ionic/ionic_main.c',
+
                  #i40e
                  'drivers/net/i40e/i40e_rxtx_vec_sse.c',
 
@@ -1894,6 +1903,7 @@ dpdk_includes_path =''' ../src/
                         ../src/dpdk/drivers/net/enic/base/
                         ../src/dpdk/drivers/net/i40e/
                         ../src/dpdk/drivers/net/i40e/base/
+                        ../src/dpdk/drivers/net/ionic/
                         ../src/dpdk/drivers/net/ixgbe/
                         ../src/dpdk/drivers/net/ixgbe/base/
                         ../src/dpdk/drivers/net/mlx4/
