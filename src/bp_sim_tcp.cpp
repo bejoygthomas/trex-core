@@ -199,7 +199,7 @@ uint16_t CFlowGenListPerThread::handle_rx_pkts(bool is_idle) {
                 ctx->m_ft.rx_handle_packet(ctx, m, is_idle,ports_id[dir]);
             }
             sum+=cnt;
-            if (sum>127) {
+            if (sum>4096) {
                 ctx->m_ft.inc_rx_throttled_cnt();
                 break;
             }
